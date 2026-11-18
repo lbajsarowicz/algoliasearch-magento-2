@@ -381,6 +381,9 @@ class IndexSettingsHandlerTest extends TestCase
         $this->assertFalse($handler->setSettings($this->createIndexOptionsStub(), $proposed));
     }
 
+    /**
+     * @dataProvider settingsProvider
+     */
     #[DataProvider('settingsProvider')]
     public function testForwardAndNoForwardSettingsChanges(
         array $proposed,

@@ -633,6 +633,9 @@ class EventProcessorTest extends TestCase
 
     // Test protected methods
 
+    /**
+     * @dataProvider orderItemsProvider
+     */
     #[DataProvider('orderItemsProvider')]
     public function testObjectDataForPurchase($priceIncludesTax, $orderItemsData, $expectedResult, $expectedTotalRevenue): void
     {

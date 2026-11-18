@@ -182,6 +182,9 @@ class ReindexTest extends TestCase
         $controller->execute();
     }
 
+    /**
+     * @dataProvider entityParamsProvider
+     */
     #[DataProvider('entityParamsProvider')]
     public function testEntityToIndex($params, $result)
     {
@@ -216,6 +219,9 @@ class ReindexTest extends TestCase
         ];
     }
 
+    /**
+     * @dataProvider redirectParamsProvider
+     */
     #[DataProvider('redirectParamsProvider')]
     public function testRedirectPath($params, $result)
     {

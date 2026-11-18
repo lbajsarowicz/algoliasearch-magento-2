@@ -29,12 +29,22 @@
   ],
   "require-dev": {
     "phpcompatibility/php-compatibility": "^9.2",
-    "phpunit/phpunit": "^9.5|^10.5|^12.0"
+    "phpunit/phpunit": "^9.5|^10.5|^12.0",
+    "magento/magento-coding-standard": "^41",
+    "phpstan/phpstan": "^2.1",
+    "bitexpert/phpstan-magento": "^0.44",
+    "phpstan/extension-installer": "^1.4"
   },
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
       "Algolia\\AlgoliaSearch\\": ""
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true
     }
   }
 }

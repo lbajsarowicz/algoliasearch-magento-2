@@ -59,17 +59,14 @@ class IndexOptionsBuilderTest extends TestCase
             ->willReturn(null);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getIndexSuffix')
             ->willReturn(ProductHelper::INDEX_NAME_SUFFIX);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getStoreId')
             ->willReturn($storeId);
 
         $indexOptions
-            ->expects($this->any())
             ->method('isTemporaryIndex')
             ->willReturn(false);
 
@@ -119,17 +116,14 @@ class IndexOptionsBuilderTest extends TestCase
             ->willReturn(null);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getIndexSuffix')
             ->willReturn(ProductHelper::INDEX_NAME_SUFFIX);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getStoreId')
             ->willReturn($storeId);
 
         $indexOptions
-            ->expects($this->any())
             ->method('isTemporaryIndex')
             ->willReturn($isTmp);
 
@@ -178,17 +172,14 @@ class IndexOptionsBuilderTest extends TestCase
             ->willReturn(null);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getIndexSuffix')
             ->willReturn(ProductHelper::INDEX_NAME_SUFFIX);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getStoreId')
             ->willReturn($storeId);
 
         $indexOptions
-            ->expects($this->any())
             ->method('isTemporaryIndex')
             ->willReturn(false);
 
@@ -365,17 +356,14 @@ class IndexOptionsBuilderTest extends TestCase
             ->willReturn(null);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getIndexSuffix')
             ->willReturn(ProductHelper::INDEX_NAME_SUFFIX);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getStoreId')
             ->willReturn($storeId);
 
         $indexOptions
-            ->expects($this->any())
             ->method('isTemporaryIndex')
             ->willReturn(false);
 
@@ -441,17 +429,14 @@ class IndexOptionsBuilderTest extends TestCase
             ->willReturn(null);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getIndexSuffix')
             ->willReturn(ProductHelper::INDEX_NAME_SUFFIX);
 
         $indexOptions
-            ->expects($this->any())
             ->method('getStoreId')
             ->willReturn($storeId);
 
         $indexOptions
-            ->expects($this->any())
             ->method('isTemporaryIndex')
             ->willReturn(false);
 

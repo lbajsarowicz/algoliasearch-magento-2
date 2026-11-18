@@ -101,6 +101,9 @@ class SaveSettingsTest extends TestCase
         $saveSettings->execute($this->createObserver('some_event'));
     }
 
+    /**
+     * @dataProvider eventFilteredEntitiesProvider
+     */
     #[DataProvider('eventFilteredEntitiesProvider')]
     public function testForwardsCorrectFilteredEntitiesForEvent(
         string $eventName,

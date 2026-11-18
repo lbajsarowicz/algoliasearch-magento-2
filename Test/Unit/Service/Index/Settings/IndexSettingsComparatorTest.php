@@ -265,6 +265,9 @@ class IndexSettingsComparatorTest extends TestCase
 
     // ── reconcileKeys() ──
 
+    /**
+     * @dataProvider reconcileKeysProvider
+     */
     #[DataProvider('reconcileKeysProvider')]
     public function testReconcileKeys(array $remote, array $local, array $expectedRemote, array $expectedLocal): void
     {

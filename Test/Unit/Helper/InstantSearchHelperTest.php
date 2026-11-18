@@ -28,6 +28,9 @@ class InstantSearchHelperTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider conficProvider
+     */
     #[DataProvider('conficProvider')]
     public function testGetNumberOfProductResults($paginationMode, $customNbOfProducts, $expectedResult): void
     {

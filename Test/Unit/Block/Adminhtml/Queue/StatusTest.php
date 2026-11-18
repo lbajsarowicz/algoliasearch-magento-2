@@ -46,6 +46,9 @@ class StatusTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider queueRunnerStatusDataProvider
+     */
     #[DataProvider('queueRunnerStatusDataProvider')]
     public function testGetQueueRunnerStatusReturnsExpectedLabel(string $status, string $expected): void
     {

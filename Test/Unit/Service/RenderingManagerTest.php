@@ -26,6 +26,9 @@ class RenderingManagerTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider backendValuesProvider
+     */
     #[DataProvider('backendValuesProvider')]
     public function testBackendRendering($actionName, $isLayoutUpdated): void
     {
@@ -53,6 +56,9 @@ class RenderingManagerTest extends TestCase
         $renderingManager->handleBackendRendering($layout, $actionName, 0);
     }
 
+    /**
+     * @dataProvider shouldPreventBackendRenderingProvider
+     */
     #[DataProvider('shouldPreventBackendRenderingProvider')]
     public function testShouldPreventBackendRendering(
         string $actionName,

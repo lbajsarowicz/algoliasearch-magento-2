@@ -78,6 +78,9 @@ class AddAlgoliaAssetsObserverTest extends TestCase
         $observer->execute($this->createObserverStub());
     }
 
+    /**
+     * @dataProvider executeConditionsProvider
+     */
     #[DataProvider('executeConditionsProvider')]
     public function testExecuteConditions(
         bool $isFrontendEnabled,
