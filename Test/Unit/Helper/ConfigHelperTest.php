@@ -87,6 +87,9 @@ class ConfigHelperTest extends TestCase
         $this->assertEquals('', $configHelper->getIndexPrefix());
     }
 
+    /**
+     * @dataProvider isEnabledFrontEndProvider
+     */
     #[DataProvider('isEnabledFrontEndProvider')]
     public function testIsEnabledFrontEnd(
         bool $isAutocompleteEnabled,

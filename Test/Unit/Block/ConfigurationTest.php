@@ -93,6 +93,9 @@ class ConfigurationTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider searchPageDataProvider
+     */
     #[DataProvider('searchPageDataProvider')]
     public function testIsSearchPage($action, $categoryId, $categoryDisplayMode, $expectedResult): void
     {

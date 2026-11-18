@@ -27,6 +27,9 @@ class QueueCronTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider valuesProvider
+     */
     #[DataProvider('valuesProvider')]
     public function testInput($value, $isValid, $canReplay = true): void
     {

@@ -26,6 +26,9 @@ class LookingSimilarTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider productIdsDataProvider
+     */
     #[DataProvider('productIdsDataProvider')]
     public function testGetProductIdsReturnsJsonEncodedArray(string $input, string $expected): void
     {

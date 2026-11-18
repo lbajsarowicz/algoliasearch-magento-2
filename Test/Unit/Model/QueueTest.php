@@ -49,6 +49,9 @@ class QueueTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider authorizedHandlersProvider
+     */
     #[DataProvider('authorizedHandlersProvider')]
     public function testAddToQueueSucceedsForAuthorizedHandlerWhenQueueInactive(string $class, string $method, array $data): void
     {
@@ -73,6 +76,9 @@ class QueueTest extends TestCase
         $queue->addToQueue($class, $method, $data);
     }
 
+    /**
+     * @dataProvider authorizedHandlersProvider
+     */
     #[DataProvider('authorizedHandlersProvider')]
     public function testAddToQueueSucceedsForAuthorizedHandlerWhenQueueActive(string $class, string $method, array $data): void
     {
@@ -87,6 +93,9 @@ class QueueTest extends TestCase
         $queue->addToQueue($class, $method, $data);
     }
 
+    /**
+     * @dataProvider unauthorizedHandlersProvider
+     */
     #[DataProvider('unauthorizedHandlersProvider')]
     public function testAddToQueueThrowsForUnauthorizedHandlersWhenQueueInactive(string $class, string $method): void
     {
@@ -101,6 +110,9 @@ class QueueTest extends TestCase
         $queue->addToQueue($class, $method, []);
     }
 
+    /**
+     * @dataProvider unauthorizedHandlersProvider
+     */
     #[DataProvider('unauthorizedHandlersProvider')]
     public function testAddToQueueThrowsForUnauthorizedHandlersWhenQueueActive(string $class, string $method): void
     {

@@ -26,6 +26,9 @@ class PriceKeyResolverTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider priceKeyDataProvider
+     */
     #[DataProvider('priceKeyDataProvider')]
     public function testGetPriceKeyWithVariousConfigurations(
         int $storeId,

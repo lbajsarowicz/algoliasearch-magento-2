@@ -228,6 +228,9 @@ class IndicesConfiguratorTest extends TestCase
         $configurator->saveConfigurationToAlgolia($this->storeId, true, $filteredEntities);
     }
 
+    /**
+     * @dataProvider skipWaitProvider
+     */
     #[DataProvider('skipWaitProvider')]
     public function testSkipsWaitOnlyWhenAsyncConfigSaveEnabledAndSkipWaitRequested(
         bool $asyncConfigSaveEnabled,

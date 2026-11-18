@@ -31,6 +31,9 @@ class JobTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider authorizedHandlersProvider
+     */
     #[DataProvider('authorizedHandlersProvider')]
     public function testExecuteSucceedsForAuthorizedHandler(string $class, string $method, array $methodArgs): void
     {
@@ -62,6 +65,9 @@ class JobTest extends TestCase
         $this->assertEquals(1, $job->getData('retries'));
     }
 
+    /**
+     * @dataProvider unauthorizedHandlersProvider
+     */
     #[DataProvider('unauthorizedHandlersProvider')]
     public function testExecuteThrowsForUnauthorizedHandlers(string $class, string $method): void
     {
